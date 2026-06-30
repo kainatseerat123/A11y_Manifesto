@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A comprehensive guide to Web Accessibility (A11y) rules, focusing on contrast, typography, and semantic HTML for enterprise-level web design.">
+    <title>A11y Manifesto | Enterprise Accessibility Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo" aria-hidden="true">A11y_Core.</div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#manifesto" class="nav-link">Manifesto</a></li>
+                    <li class="nav-item"><a href="#color" class="nav-link">Color</a></li>
+                    <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
+                    <li class="nav-item"><a href="#semantics" class="nav-link">Semantics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        
+        <header class="hero-section">
+            <span class="hero-badge">Dark Enterprise Edition</span>
+            <h1 class="hero-title">The Meta A11y Manifesto.</h1>
+            <p class="hero-subtitle">Designing accessible web experiences for everyone. Built with zero compromises, strictly adhering to WCAG standards.</p>
+        </header>
+
+        <section id="manifesto" class="content-section">
+            <div class="section-header">
+                <div class="section-icon" aria-hidden="true">✦</div>
+                <h2 class="section-title">The POUR Principles</h2>
+            </div>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p class="section-text">Accessibility is not a feature; it is the fundamental architecture of the modern web. To achieve enterprise-grade inclusion, we strictly follow the four pillars of accessibility (POUR):</p>
+                    <ul class="premium-list">
+                        <li><strong>Perceivable:</strong> Information and user interface components must be presentable to users in ways they can perceive.</li>
+                        <li><strong>Operable:</strong> User interface components and navigation must be operable across all devices, including keyboards.</li>
+                        <li><strong>Understandable:</strong> Information and the operation of the user interface must be logical and predictable.</li>
+                        <li><strong>Robust:</strong> Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies.</li>
+                    </ul>
+                </div>
+                <figure class="visual-example">
+                    <img src="assets/pour-diagram.webp" loading="lazy" alt="Diagram illustrating Perceivable, Operable, Understandable, and Robust principles" width="600" height="400" class="content-image">
+                    <figcaption class="image-caption">The four pillars of Web Accessibility.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="color" class="content-section">
+            <div class="section-header">
+                <div class="section-icon" aria-hidden="true">◑</div>
+                <h2 class="section-title">Color & Contrast Metrics</h2>
+            </div>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p class="section-text">Color should never be the sole method of conveying important information. For text, we must maintain a strict contrast ratio of at least <strong>4.5:1 (WCAG AA)</strong> for normal text, and <strong>7:1 (WCAG AAA)</strong> for enhanced readability.</p>
+                    <p class="section-text">In this Dark Enterprise theme, we utilize absolute White (Zinc 50) on Deep Midnight (Zinc 950) to ensure maximum clarity without causing visual fatigue or halation effects for astigmatism sufferers.</p>
+                </div>
+                <figure class="visual-example">
+                    <img src="assets/contrast-example.webp" loading="lazy" alt="Visual comparison showing passing and failing contrast ratios in dark mode" width="600" height="400" class="content-image">
+                    <figcaption class="image-caption">WCAG 4.5:1 compliant contrast demonstration.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="typography" class="content-section">
+            <div class="section-header">
+                <div class="section-icon" aria-hidden="true">Aa</div>
+                <h2 class="section-title">Typography & Layout</h2>
+            </div>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p class="section-text">Typography drives the entire macro layout. We use relative units (rems and ems) to ensure text scales seamlessly if a user adjusts their browser preferences. Generous line-height (1.7) and precise character tracking ensure zero cognitive load.</p>
+                    <p class="section-text">Line length is capped at roughly 65-75 characters. Reading long lines of text forces the eyes to work harder tracking back to the start of the next line, which drastically reduces readability.</p>
+                </div>
+                <figure class="visual-example">
+                    <img src="assets/typography-scale.webp" loading="lazy" alt="A typographic scale showing relative font sizing for accessibility" width="600" height="400" class="content-image">
+
+                    <figcaption class="image-caption">Fluid typography scale using relative units.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="semantics" class="content-section">
+            <div class="section-header">
+                <div class="section-icon" aria-hidden="true">&lt;/&gt;</div>
+                <h2 class="section-title">Structural Semantics</h2>
+            </div>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p class="section-text">Proper HTML tags communicate deep meaning to screen readers and assistive technologies natively. A cleanly structured Document Object Model (DOM) requires fewer CSS overrides and scales perfectly across devices.</p>
+                    <p class="section-text">Using semantic landmarks like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> allows users navigating via keyboard to jump directly to the content they need, bypassing repetitive navigation links.</p>
+                </div>
+                <figure class="visual-example">
+                    <img src="assets/semantic-dom.webp" loading="lazy" alt="Comparison between a semantic DOM tree and a generic div structure" width="600" height="400" class="content-image">
+                    <figcaption class="image-caption">Semantic Landmarks vs Generic Containers.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">© 2026 A11y_Core. Built with strict principles. Zero inline styles. Semantic perfection.</p>
+    </footer>
+
+</body>
+</html>
